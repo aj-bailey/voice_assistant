@@ -1,5 +1,6 @@
 from app.adapters.open_ai_repository import OpenAIRepository
 from app.entrypoints.voice_listener import VoiceListener
+from app.utils.voice_transmitter import VoiceTransmitter
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -25,6 +26,7 @@ def main():
                     else:
                         response = open_ai_repository.query(phrase)
                         print(response)
+                        VoiceTransmitter.transmit(message=response)
                         phrase_recorded = True
 
     print("Exiting...")
