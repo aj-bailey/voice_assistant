@@ -1,5 +1,5 @@
-import os
-from gtts import gTTS
+from app.utils.voice_transmitter import VoiceTransmitter
+
 import speech_recognition as sr
 
 class VoiceListener():
@@ -17,10 +17,7 @@ class VoiceListener():
 
             print(f"You said: {spoken_text}")
             if "hey raspberry" in spoken_text:
-                speech = gTTS(text="Hi")
-                speech_file = "speech.mp3"
-                speech.save(speech_file)
-                os.system('afplay '+ speech_file)
+                VoiceTransmitter.transmit(message="Hi")
                 return True
             else:
                 return False
@@ -44,11 +41,7 @@ class VoiceListener():
             return spoken_text
         except sr.UnknownValueError:
             print("Unable to understand the recorded phrase.")
-
-            speech = gTTS(text="I didn't catch that")
-            speech_file = "speech.mp3"
-            speech.save(speech_file)
-            os.system('afplay '+ speech_file)
+            VoiceTransmitter.transmit(message="I didn't catch that")
         except sr.RequestError as e:
             print(f"Error: {e}")
 
