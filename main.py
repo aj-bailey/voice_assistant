@@ -1,5 +1,9 @@
-def main():
-  pass
+from app.entrypoints.voice_listener import VoiceListener
 
-if __name__ == __main__:
+def main():
+  while True:
+    if VoiceListener.listen_for_trigger():
+      pass
+
+if __name__ == "__main__":
   main()
