@@ -11,6 +11,7 @@ ipdb = "^0.13.13"
 gtts = "^2.5.0"
 speechrecognition = "^3.10.1"
 pyaudio = "^0.2.14"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
