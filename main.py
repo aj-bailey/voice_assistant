@@ -1,11 +1,8 @@
-import os
-
 from app.adapters.open_ai_repository import OpenAIRepository
 from app.entrypoints.voice_listener import VoiceListener
 from dotenv import load_dotenv
 
 load_dotenv()
-OPEN_AI_API_KEY = os.environ.get('OPEN_AI_API_KEY')
 
 def main():
     vl = VoiceListener()
