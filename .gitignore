@@ -1,0 +1,11 @@
+# local development files 
+.pyc
+.vscode
+.DS_Store
+.idea
+__pycache__
+.python-version
+
+credentials.json
+token.json
+.env
