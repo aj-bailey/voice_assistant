@@ -3,8 +3,11 @@ from gtts import gTTS
 
 class VoiceTransmitter():
     @classmethod
-    def transmit(cls, message) -> None:
-        speech = gTTS(text=message)
+    def transmit(cls, message=None) -> None:
         speech_file = "speech.mp3"
-        speech.save(speech_file)
+
+        if message:
+            speech = gTTS(text=message)
+            speech.save(speech_file)
+
         os.system('afplay '+ speech_file)
