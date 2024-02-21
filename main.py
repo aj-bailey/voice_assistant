@@ -24,9 +24,11 @@ def main():
                         phrase_recorded = True
                         continue_listening = False
                     else:
-                        response = open_ai_repository.query(phrase)
-                        print(response)
-                        VoiceTransmitter.transmit(message=response)
+                        text_response = open_ai_repository.query(phrase)
+                        open_ai_repository.audio_response(text_response)
+                        print(text_response)
+                        VoiceTransmitter.transmit()
+
                         phrase_recorded = True
 
     print("Exiting...")
