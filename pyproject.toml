@@ -13,6 +13,8 @@ speechrecognition = "^3.10.1"
 pyaudio = "^0.2.14"
 python-dotenv = "^1.0.0"
 openai = "^1.6.1"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
 
 
 [build-system]
