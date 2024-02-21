@@ -1,0 +1,1 @@
+This is a proof-of-concept voice assistant that makes API requests to OpenAI's ChatGPT service.
