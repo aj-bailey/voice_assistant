@@ -1,7 +1,8 @@
+from dotenv import load_dotenv
+
 from app.adapters.open_ai_repository import OpenAIRepository
 from app.entrypoints.voice_listener import VoiceListener
 from app.utils.voice_transmitter import VoiceTransmitter
-from dotenv import load_dotenv
 
 load_dotenv()
 

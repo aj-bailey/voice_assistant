@@ -1,6 +1,6 @@
-from app.utils.voice_transmitter import VoiceTransmitter
-
 import speech_recognition as sr
+
+from app.utils.voice_transmitter import VoiceTransmitter
 
 
 class VoiceListener():
