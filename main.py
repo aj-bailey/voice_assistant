@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def main():
     vl = VoiceListener()
     open_ai_repository = OpenAIRepository()
@@ -16,7 +17,7 @@ def main():
 
             while not phrase_recorded:
                 phrase = vl.record_phrase()
-                
+
                 if phrase:
                     if phrase == 'stop listening':
                         phrase_recorded = True
@@ -32,6 +33,7 @@ def main():
                         phrase_recorded = True
 
     print("Exiting...")
+
 
 if __name__ == "__main__":
     main()

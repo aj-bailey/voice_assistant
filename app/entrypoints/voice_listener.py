@@ -2,6 +2,7 @@ from app.utils.voice_transmitter import VoiceTransmitter
 
 import speech_recognition as sr
 
+
 class VoiceListener():
     def __init__(self):
         self.recognizer = sr.Recognizer()

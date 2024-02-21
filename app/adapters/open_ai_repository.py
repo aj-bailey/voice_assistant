@@ -1,5 +1,6 @@
 from openai import OpenAI
 
+
 class OpenAIRepository():
     def __init__(self):
         self.client = OpenAI()
@@ -12,7 +13,7 @@ class OpenAIRepository():
             ]
         )
         return completion.choices[0].message.content
-    
+
     def audio_response(self, message):
         response = self.client.audio.speech.create(
             model="tts-1",
